@@ -3,7 +3,13 @@
 {% block main %}
 <html>
     <body>
-        <h1>Coberturas de autos</h1>       
+        <h1>Coberturas de autos</h1>   
+<!--nuevo   -->
+<form action="{% url 'agregar-post' %}" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Agregar">
+</form>    
     
     </body>
 </html>
